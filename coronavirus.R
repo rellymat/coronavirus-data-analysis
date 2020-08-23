@@ -1,8 +1,8 @@
 library(data.table)
 library(dplyr)
 dt = fread("c://Users/Harel/corona_lab_tests_ver005.csv")
-dt[dt == "ηιεαι"] <- "positive"
-dt[dt == "ωμιμι"] <- "negative"
+dt[dt == "Γ§Γ©Γ₯Γ‘Γ©"] <- "positive"
+dt[dt == "ΓΉΓ¬Γ©Γ¬Γ©"] <- "negative"
 dt <- dt[!(dt$corona_result != "positive" & dt$corona_result != "negative")]
 dt$test_date <- as.Date(dt$test_date,"%d/%m/%y")
 dt$result_date <- as.Date(dt$result_date,"%d/%m/%y")
